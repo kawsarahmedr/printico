@@ -1,0 +1,10 @@
+Demo Design: https://pricom.harutheme.com/
+
+== Sample Design on Templatemonster ==
+https://www.templatemonster.com/landing-page-template/printing-farm-printing-company-html5-landing-page-template-272957.html
+
+
+== Typewrite effect resources ==
+https://css-tricks.com/snippets/css/typewriter-effect/
+
+https://codepen.io/geoffgraham/pen/MWVmxQp
