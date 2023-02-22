@@ -1,0 +1,86 @@
+/*
+Template Name: Printico-Printing HTML Website Template
+Template URL: 
+Author: KawsarAhmed
+Author URI: https://urldev.com/kawsarahmed
+Version: 1.0.0
+Description: Our "Printico" Printing HTML Website Template is designed to take full advantage of the flexibility of the block editor. Bloggers, Publishers, Writers, Marketers, Affiliates, Organizations and Businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: Printico, Printing Website, Print, Printing HTML Website Template, blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template.
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*------------------------
+>>> TABLE OF CONTENTS:
+--------------------------
+01. CSS Reset
+02. Mmenu Light CSS
+03. 
+04. WordPress Core
+05. luckyet Grid CSS
+06. Global CSS
+07. Header CSS
+08. Header Logo CSS
+09. Header Nav Menu CSS
+10. Mobile Menu
+11. Header Search Form CSS
+12. Blog Posts CSS
+13. Share Icons CSS
+14. Pagination CSS
+15. comments template CSS
+16. Widget CSS
+17. Footer CSS
+18. luckyet Extra futures CSS
+19. Responsive CSS for luckyet theme
+------------------------------------*/
+
+/* >> 01. CSS Reset
+-------------------*/
+*{
+    box-sizing: border-box;
+}
+html,
+body {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+    border: none;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+}
+blockquote::before,
+blockquote::after {
+    content: "";
+}
