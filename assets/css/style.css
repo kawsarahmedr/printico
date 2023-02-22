@@ -15,12 +15,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 >>> TABLE OF CONTENTS:
 --------------------------
 01. CSS Reset
-02. Mmenu Light CSS
+02. Header CSS
 03. 
 04. WordPress Core
 05. luckyet Grid CSS
 06. Global CSS
-07. Header CSS
+07. 
 08. Header Logo CSS
 09. Header Nav Menu CSS
 10. Mobile Menu
@@ -84,3 +84,6 @@ blockquote::before,
 blockquote::after {
     content: "";
 }
+
+/* >> 02. Header CSS
+---------------------*/
