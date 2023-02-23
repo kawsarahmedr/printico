@@ -9,3 +9,8 @@ https://www.templatemonster.com/landing-page-template/printing-farm-printing-com
 https://css-tricks.com/snippets/css/typewriter-effect/
 
 https://codepen.io/geoffgraham/pen/MWVmxQp
+
+
+=== How to Create a Section Divider Using CSS
+
+https://www.freecodecamp.org/news/section-divider-using-css/
