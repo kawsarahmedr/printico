@@ -1,3 +1,8 @@
+=== Color Schema ===
+Primary Color: #B21980
+Secondary Color: #FED047
+Text Color: #7a7a7a
+
 === Demo Design ===
 URL: https://pricom.harutheme.com/
 

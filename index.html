@@ -9,10 +9,12 @@
     <title>Printico | Printing HTML Website Template</title>
 
     <!-- Linking CSS Files -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="dfgdf"><!-- "dark" or "light" class -->
     <!-- Header Topbar -->
     <section class="header-topbar">
         <div class="container">
@@ -30,13 +32,15 @@
                         <ul>
                             <li>Fb</li>
                             <li>Tw</li>
-                            <li>Lin</li>
                             <li>YT</li>
                         </ul>
                     </div><!-- End topbar-social-icons -->
-                    <div class="dark-light-mode-icon">
-                        <span>Dark/Light</span>
-                    </div><!-- End dark-light-mode-icon -->
+                    <div class="dark-light-switch">
+                        <button id="btnSwitch" class="btn shadow">
+                            <i class="fa-regular fa-sun"></i>
+                            <i class="fa fa-moon"></i>
+                        </button>
+                    </div><!-- End dark-light-switch -->
                 </div>
             </div>
         </div>
@@ -100,7 +104,17 @@
             </div>
         </section><!-- Hero Section End -->
         <section>
-            <h1>hello</h1>
+            <div class="container">
+                <div class="row">
+                    <h1>hello</h1>
+                    <i class="fa fa-car"></i>
+                    <i class="fa fa-car" style="font-size:48px;"></i>
+                    <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+                    <i class="fa-solid fa-house"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-thin fa-laptop"></i>
+                </div>
+            </div>
         </section>
         
     </main><!-- Main Content Area End -->
@@ -118,5 +132,17 @@
     <script src="assets/js/jquery-3.6.3.min.js"></script>
     <!-- <script src="assets/js/bootstrap.min.js"></script> -->
     <script src="assets/js/printico.js"></script>
+    <script>
+        document.getElementById('btnSwitch').addEventListener('click',()=>{
+            if (document.documentElement.getAttribute('data-theme') == 'dark') {
+                document.documentElement.setAttribute('data-theme','light');
+                document.getElementById('btnSwitch').classList.remove("dark-theme");
+            }
+            else {
+                document.documentElement.setAttribute('data-theme','dark');
+                document.getElementById('btnSwitch').classList.add("dark-theme");
+            }
+        })
+    </script>
 </body>
 </html>

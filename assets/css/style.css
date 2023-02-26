@@ -14,12 +14,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /*------------------------
 >>> TABLE OF CONTENTS:
 --------------------------
-01. CSS Reset
-02. Header CSS
-03. 
-04. WordPress Core
-05. luckyet Grid CSS
-06. Global CSS
+01. Global CSS Variable
+02. CSS Reset
+03. Global CSS
+04. Header CSS
+05. 
+06. 
 07. 
 08. Header Logo CSS
 09. Header Nav Menu CSS
@@ -31,11 +31,47 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 15. comments template CSS
 16. Widget CSS
 17. Footer CSS
-18. luckyet Extra futures CSS
-19. Responsive CSS for luckyet theme
+18. printico Extra futures CSS
+19. Responsive CSS for printico theme
 ------------------------------------*/
 
-/* >> 01. CSS Reset
+/* >> 01. Global CSS Variable
+-----------------------------*/
+:root,
+[data-theme=light] {
+    --printico-color:#B21980; /* use: var(--printico-color); */
+    --printico-secondary-color:#FED047;
+    --printico-heading-color:#000000; 
+    --printico-text-color:#7a7a7a;
+    --printico-link-color:#B21980;
+    --printico-link-hover-color:#FED047;
+    --printico-btn-color:#B21980;
+    --printico-btn-text-color:#FFFFFF;
+    --printico-btn-hover-color:#FED047;
+    --printico-btn-hover-text-color:#B21980;
+    --printico-bg-color:#FFFFFF;
+    --printico-light-color:#ffffff;
+    --printico-dark-color:#000000;
+}
+
+[data-theme="dark"] {
+    --printico-color:#fff; /* use: var(--printico-color); */
+    --printico-secondary-color:#000;
+    --printico-heading-color:#ffffff; 
+    --printico-text-color:#fff;
+    --printico-link-color:#fff;
+    --printico-link-hover-color:#B21980;
+    --printico-btn-color:#fff;
+    --printico-btn-text-color:#000;
+    --printico-btn-hover-color:#fff;
+    --printico-btn-hover-text-color:#000;
+    --printico-bg-color:#000;
+    --printico-light-color:#ffffff;
+    --printico-dark-color:#000000;
+}
+
+
+/* >> 02. CSS Reset
 -------------------*/
 *{
     box-sizing: border-box;
@@ -45,6 +81,8 @@ body {
     border: none;
     margin: 0;
     padding: 0;
+    font-family: inherit;
+    background: var(--printico-bg-color);
 }
 h1,h2,h3,h4,h5,h6,
 p,
@@ -74,9 +112,9 @@ tr,
 th,
 td {
     border: none;
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0;
+    /* font-size: inherit;
+    line-height: inherit; */
+    /* margin: 0; */
     padding: 0;
     text-align: inherit;
 }
@@ -85,5 +123,51 @@ blockquote::after {
     content: "";
 }
 
-/* >> 02. Header CSS
+/* >> 03. Global CSS
 ---------------------*/
+h1,h2,h3,h4,h5,h6{
+    color: var(--printico-heading-color);
+}
+p{
+    color: var(--printico-text-color);
+}
+a{
+    color: var(--printico-link-color);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--printico-link-hover-color);
+}
+.btn{
+    background-color: var(--printico-btn-color);
+    color: var(--printico-btn-text-color);
+}
+.btn:hover{
+    background-color: var(--printico-btn-hover-color);
+    color: var(--printico-btn-hover-text-color);
+}
+
+/* >> 04. Header CSS
+---------------------*/
+.dark-light-switch .btn{
+    position: relative;
+}
+.dark-light-switch .btn i{
+    padding: 0 5px;
+}
+.dark-light-switch .btn::after{
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 2px;
+    bottom: 2px;
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid red!important;
+    transition: 1s;
+}
+.dark-light-switch .btn.dark-theme::after{
+    left: 40px;
+    border: 1px solid #fff;
+}
