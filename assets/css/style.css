@@ -17,8 +17,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 01. Global CSS Variable
 02. CSS Reset
 03. Global CSS
-04. Header CSS
-05. 
+04. Header Topbar CSS
+05. Header CSS
 06. 
 07. 
 08. Header Logo CSS
@@ -61,13 +61,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --printico-text-color:#fff;
     --printico-link-color:#fff;
     --printico-link-hover-color:#B21980;
-    --printico-btn-color:#fff;
-    --printico-btn-text-color:#000;
-    --printico-btn-hover-color:#fff;
-    --printico-btn-hover-text-color:#000;
+    --printico-btn-color:#B21980;
+    --printico-btn-text-color:#FFFFFF;
+    --printico-btn-hover-color:#FED047;
+    --printico-btn-hover-text-color:#B21980;
     --printico-bg-color:#000;
-    --printico-light-color:#ffffff;
-    --printico-dark-color:#000000;
+    --printico-light-color:#000000;
+    --printico-dark-color:#FFFFFF;
 }
 
 /* >> 02. CSS Reset
@@ -140,33 +140,59 @@ a:hover{
 .btn{
     background-color: var(--printico-btn-color);
     color: var(--printico-btn-text-color);
+    /* border: 1px solid var(--printico-btn-color); */
 }
 .btn:hover{
     background-color: var(--printico-btn-hover-color);
     color: var(--printico-btn-hover-text-color);
+    /* border: 1px solid var(--printico-btn-hover-color); */
 }
 
-/* >> 04. Header CSS
----------------------*/
+/* >> 04. Header Topbar CSS
+---------------------------*/
+.header-topbar{
+    background-color: var(--printico-color);
+}
+.header-topbar a{
+    color: var(--printico-light-color);
+}
+.header-topbar a:hover{
+    color: var(--printico-link-hover-color);
+}
+.topbar-social-icons ul li{
+    padding: 0 5px;
+    list-style: none;
+}
+/* Dark Light Switch btn css */
 .dark-light-switch .btn{
     position: relative;
+    background-color: var(--printico-light-color);
+    color: var(--printico-dark-color);
 }
-.dark-light-switch .btn i{
-    padding: 0 5px;
+.dark-light-switch .btn:hover{
+    background-color: var(--printico-light-color);
+    color: var(--printico-dark-color);
+}
+.dark-light-switch .btn i:first-child{
+    padding-right: 5px;
+}
+.dark-light-switch .btn i:last-child{
+    padding-left: 5px;
 }
 .dark-light-switch .btn::after{
     position: absolute;
     content: "";
-    left: 10px;
-    top: 2px;
+    left: 5px;
+    top: 0px;
     bottom: 2px;
     border-radius: 100px;
-    height: 30px;
-    width: 30px;
-    border: 1px solid red!important;
-    transition: 1s;
+    height: 28px;
+    width: 28px;
+    border: 1px solid var(--printico-color);
+    transition: 0.5s;
 }
 .dark-light-switch .btn.dark-theme::after{
-    left: 40px;
-    border: 1px solid #fff;
+    left: 31px;
 }
+/* >> 05. Header CSS
+---------------------*/

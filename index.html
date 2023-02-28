@@ -11,32 +11,32 @@
     <!-- Linking CSS Files -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="assets/fontawesome/css/all.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body><!-- "dark" or "light" class -->
     <!-- Header Topbar -->
-    <section class="header-topbar">
+    <section class="header-topbar pt-1 pb-1">
         <div class="container">
             <div class="row">
                 <div class="col-6 col-md-6 col-sm-12 d-flex">
-                    <div class="topbar-email">
+                    <div class="topbar-email align-self-center">
                         <a href="mailto:mail@yourmail.com"><span>Email: </span>email@yourdoamin.com</a>
                     </div><!-- End topbar-email -->
-                    <div class="topbar-phone">
-                        <a href="tel:+8801700123456"><span>Phone: </span>+8801700 123456 my phone number</a>
+                    <div class="topbar-phone align-self-center pl-1">
+                        <a href="tel:+8801700123456"><span>Phone: </span>+8801700 123456</a>
                     </div><!-- End topbar-phone -->
                 </div>
-                <div class="col-6 col-md-6 col-sm-12 d-flex">
-                    <div class="topbar-social-icons">
-                        <ul>
-                            <li>Fb</li>
-                            <li>Tw</li>
-                            <li>YT</li>
+                <div class="col-6 col-md-6 col-sm-12 d-flex justify-content-end">
+                    <div class="topbar-social-icons align-self-center">
+                        <ul class="d-flex m-0">
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                         </ul>
                     </div><!-- End topbar-social-icons -->
-                    <div class="dark-light-switch">
-                        <button id="btnSwitch" class="btn shadow">
+                    <div class="dark-light-switch align-self-center">
+                        <button id="darkLightSwitch" class="btn shadow d-flex align-items-center">
                             <i class="fa-regular fa-sun"></i>
                             <i class="fa fa-moon"></i>
                         </button>
@@ -53,31 +53,29 @@
             <div class="row">
                 <div class="col-md-3 col-sm-4">
                     <div class="logo">
-                        <a href="#"><h2 class="logo">Logo</h2></a>
+                        <a href="#" class="navbar-brand"><h2 class="logo">Brand Logo</h2></a>
                         <!-- <img src="#" alt="Logo"> -->
                     </div><!-- End log -->
                 </div>
                 <div class="col-md-9 col-sm-8">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="main_nav">
 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown"> Dropdown right </a>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                                            <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar-collapse -->
                     </nav><!-- End navbar -->
                     <div class="header-righ-btn">
                         <a href="#">Get Started</a>
@@ -130,19 +128,7 @@
 
     <!-- Linking JS Files -->
     <script src="assets/js/jquery-3.6.3.min.js"></script>
-    <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/printico.js"></script>
-    <script>
-        document.getElementById('btnSwitch').addEventListener('click',()=>{
-            if (document.documentElement.getAttribute('data-theme') == 'dark') {
-                document.documentElement.setAttribute('data-theme','light');
-                document.getElementById('btnSwitch').classList.remove("dark-theme");
-            }
-            else {
-                document.documentElement.setAttribute('data-theme','dark');
-                document.getElementById('btnSwitch').classList.add("dark-theme");
-            }
-        })
-    </script>
 </body>
 </html>
