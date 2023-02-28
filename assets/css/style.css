@@ -196,3 +196,14 @@ a:hover{
 }
 /* >> 05. Header CSS
 ---------------------*/
+
+.fixed-top {
+    top: -40px;
+    transform: translateY(40px);
+    transition: transform .5s;
+}
+
+
+.main{
+    height: 2000px;
+}

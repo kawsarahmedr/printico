@@ -1,34 +1,45 @@
 (function ($) {
-    var defaultFunction = function() {
-        var headerHeight = $('header').outerHeight();
-        var isMobile = luckyet_script_vars.IS_MOBILE;
-        var siteHeader = luckyet_script_vars.SITE_HEADER;
-        if (siteHeader == 'default'){
-            $('body').css("padding-top", headerHeight ); 
-        }else{
-            $('body').css("padding-top", isMobile ? headerHeight : Math.abs(headerHeight + 25));
-        }
-    }
-    // main menu search bar
-    var searchform = function () {
-        $('.header-search-icon').on("click", function () {
-            $('.search-form, .luckyet-icon-search').toggleClass('active');
+    var defaultFunction = function () {
+
+        $(window).scroll(function () {
+
+            var scrollTopValue = $(this).scrollTop();
+            var headerHeight = $('header').outerHeight();
+            
+            if (scrollTopValue > 200) {
+
+                $('#header').addClass('fixed-top');
+                $('body').css("padding-top", headerHeight);
+
+            } else {
+
+                $('#header').removeClass('fixed-top');
+                $('body').css("padding-top", '0');
+
+            }
+
         });
+
     }
     // When the user clicks on the button, scroll to the top of the document
     var scrolltopfunction = function () {
+
         $(window).scroll(function () {
+
             var scrollTopValue = $(this).scrollTop();
-            if ( scrollTopValue > 150 ){
+            if (scrollTopValue > 150) {
                 $('#gototop').addClass('active');
-            }else{
+            } else {
                 $('#gototop').removeClass('active');
             }
+
         });
+
         $('#gototop').on("click", function () {
             $('html, body').animate({ scrollTop: 0 }, 'slow');
         });
     }
+
     var onScrollTopDisplayHeader = function () {
         // Hide Header on on scroll down
         var didScroll;
@@ -66,26 +77,29 @@
             lastScrollTop = st;
         }
     }
-    var darkLightTheme = function(){
+    var darkLightTheme = function () {
 
         $('#darkLightSwitch').on("click", function () {
-
+           
             if (document.documentElement.getAttribute('data-theme') == 'dark') {
-                document.documentElement.setAttribute('data-theme','light');
-                document.documentElement.setAttribute('data-bs-theme','light');
+
+                document.documentElement.setAttribute('data-theme', 'light');
+                document.documentElement.setAttribute('data-bs-theme', 'light');
                 this.classList.remove("dark-theme");
+
             }
             else {
-                document.documentElement.setAttribute('data-theme','dark');
-                document.documentElement.setAttribute('data-bs-theme','dark');
+
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.documentElement.setAttribute('data-bs-theme', 'dark');
                 this.classList.add("dark-theme");
+                
             }
         });
     }
     // Dom Ready
     $(function () {
-        // defaultFunction();
-        // searchform();
+        defaultFunction();
         // scrolltopfunction();
         // onScrollTopDisplayHeader();
         darkLightTheme();
