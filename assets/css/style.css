@@ -121,6 +121,9 @@ blockquote::before,
 blockquote::after {
     content: "";
 }
+img{
+    width: 100%;
+}
 
 /* >> 03. Global CSS
 ---------------------*/
@@ -140,12 +143,88 @@ a:hover{
 .btn{
     background-color: var(--printico-btn-color);
     color: var(--printico-btn-text-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0;
     /* border: 1px solid var(--printico-btn-color); */
 }
 .btn:hover{
     background-color: var(--printico-btn-hover-color);
     color: var(--printico-btn-hover-text-color);
     /* border: 1px solid var(--printico-btn-hover-color); */
+}
+.section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: hidden;
+}
+.particles-canvas{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.zindex-0{
+    z-index: 0;
+}
+.dotted-ellipse-top-left,
+.dotted-ellipse-top-right,
+.dotted-ellipse-bottom-left,
+.dotted-ellipse-bottom-right{
+    position: relative;
+    z-index: 0;
+}
+.dotted-ellipse-top-left::before{
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -150px;
+    width: 300px;
+    height: 200px;
+    background-image: radial-gradient(circle, var(--printico-dark-color) 2px, transparent 0);
+    background-size: 25px 25px;
+    z-index: -1;
+    opacity: .3;
+}
+.dotted-ellipse-top-right::after{
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -150px;
+    width: 300px;
+    height: 200px;
+    background-image: radial-gradient(circle, var(--printico-dark-color) 2px, transparent 0);
+    background-size: 25px 25px;
+    z-index: -1;
+    opacity: .3;
+}
+.dotted-ellipse-bottom-left::before{
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    left: -150px;
+    width: 300px;
+    height: 200px;
+    background-image: radial-gradient(circle, var(--printico-dark-color) 2px, transparent 0);
+    background-size: 25px 25px;
+    z-index: -1;
+    opacity: .3;
+}
+.dotted-ellipse-bottom-right::after{
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    right: -150px;
+    width: 300px;
+    height: 200px;
+    background-image: radial-gradient(circle, var(--printico-dark-color) 2px, transparent 0);
+    background-size: 25px 25px;
+    z-index: -1;
+    opacity: .3;
 }
 
 /* >> 04. Header Topbar CSS
@@ -203,7 +282,17 @@ a:hover{
     transition: transform .5s;
 }
 
-
+/* Main Body CSS */
 .main{
     height: 2000px;
+}
+
+/* Hero Section CSS */
+.hero-section{
+    position: relative;
+    z-index: 0;
+    background-color: var(--printico-light-color);
+}
+.hero-section .container{
+    z-index: 1;
 }

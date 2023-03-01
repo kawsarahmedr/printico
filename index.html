@@ -19,7 +19,7 @@
     <section class="header-topbar pt-1 pb-1">
         <div class="container">
             <div class="row">
-                <div class="col-6 col-md-6 col-sm-12 d-flex">
+                <div class="col-md-6 col-sm-12 d-flex">
                     <div class="topbar-email align-self-center">
                         <a href="mailto:mail@yourmail.com"><span>Email: </span>email@yourdoamin.com</a>
                     </div><!-- End topbar-email -->
@@ -27,7 +27,7 @@
                         <a href="tel:+8801700123456"><span>Phone: </span>+8801700 123456</a>
                     </div><!-- End topbar-phone -->
                 </div>
-                <div class="col-6 col-md-6 col-sm-12 d-flex justify-content-end">
+                <div class="col-md-6 col-sm-12 d-flex justify-content-end">
                     <div class="topbar-social-icons align-self-center">
                         <ul class="d-flex m-0">
                             <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -59,8 +59,8 @@
                         </a>
                     </div><!-- End log -->
                 </div>
-                <div class="col-md-9 col-sm-8">
-                    <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="col-md-9 col-sm-8 d-flex justify-content-end">
+                    <nav id="navbar_top" class="navbar navbar-expand-lg align-self-center">
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -79,8 +79,8 @@
                                 </ul>
                             </div> <!-- navbar-collapse -->
                     </nav><!-- End navbar -->
-                    <div class="header-righ-btn">
-                        <a href="#">Get Started</a>
+                    <div class="header-righ-btn align-self-center">
+                        <a href="#" class="btn">Get Started</a>
                     </div><!-- End header-righ-btn -->
                 </div>
             </div>
@@ -92,27 +92,32 @@
     <main id="main" class="main">
 
         <!-- Hero Section Start -->
-        <section id="hero" class="hero">
+        <section class="section hero-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-12 col-sm-12">
+                    <div class="col-md-6 col-sm-12 align-self-center dotted-ellipse-top-left">
+                        <h5>Printing website template.</h5>
                         <h1>Welcome to Printico-Printing HTML Website Template!</h1>
-                        <p>Printing website template.</p>
-                        <a href="https://wpfresher.com/printico-html-template">Printico</a>
+                        <a href="https://wpfresher.com/printico-html-template" class="btn">Let's Talk</a>
+                    </div>
+                    <div class="col-md-6 col-sm-12 align-self-center dotted-ellipse-bottom-left dotted-ellipse-top-right">
+                        <div class="hero-image">
+                            <img class="rounded-circle" src="assets/images/hero-banner-img-1.png" alt="Hero Banner Image">
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="particles-canvas">
+                <canvas class="background"></canvas>
+            </div>
+            
         </section><!-- Hero Section End -->
-        <section>
+        <section class="section">
             <div class="container">
                 <div class="row">
-                    <h1>hello</h1>
-                    <i class="fa fa-car"></i>
-                    <i class="fa fa-car" style="font-size:48px;"></i>
-                    <i class="fa fa-car" style="font-size:60px;color:red;"></i>
-                    <i class="fa-solid fa-house"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-thin fa-laptop"></i>
+                    <div class="title dotted-ellipse-top-left">
+                        <h2>Hi this is a simple title.</h2>
+                    </div>
                 </div>
             </div>
         </section>
@@ -131,6 +136,7 @@
     <!-- Linking JS Files -->
     <script src="assets/js/jquery-3.6.3.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/printico.js"></script>
 </body>
 </html>

@@ -97,12 +97,48 @@
             }
         });
     }
+    var particles = Particles.init({
+
+        // normal options
+        selector: '.background',
+        color: ['#B21980', '#404B69', '#DBEDF3'],
+        maxParticles: 400,
+        speed: 0.5,
+        sizeVariations: 4,
+        minDistance: 120,
+        connectParticles: false,
+        
+        // options for breakpoints
+        responsive: [{
+            breakpoint: 768,
+            options: {
+            maxParticles: 200,
+            color: '#48F2E3',
+            connectParticles: false
+            }
+        },{
+            breakpoint: 425,
+            options: {
+            maxParticles: 100,
+            connectParticles: true
+            }
+        },{
+            breakpoint: 320,
+            options: {
+                maxParticles: 0
+                // disables particles.js   
+            }
+        }]
+
+    });
+    
     // Dom Ready
     $(function () {
         defaultFunction();
         // scrolltopfunction();
         // onScrollTopDisplayHeader();
         darkLightTheme();
+        particles();
     });
 })(jQuery);
 /*
