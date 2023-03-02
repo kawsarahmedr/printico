@@ -40,6 +40,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 :root,
 [data-theme=light] {
     --printico-color:#B21980; /* use: var(--printico-color); */
+    --printico-color-rgb: 178, 25, 128;
     --printico-secondary-color:#FED047;
     --printico-heading-color:#000000; 
     --printico-text-color:#7a7a7a;
@@ -56,6 +57,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 [data-theme="dark"] {
     --printico-color:#fff; /* use: var(--printico-color); */
+    --printico-color-rgb: 256, 256, 256;
     --printico-secondary-color:#000;
     --printico-heading-color:#ffffff; 
     --printico-text-color:#fff;
@@ -171,10 +173,23 @@ a:hover{
 .zindex-0{
     z-index: 0;
 }
+/* Dotted Ellipse Shape CSS */
 .dotted-ellipse-top-left,
 .dotted-ellipse-top-right,
 .dotted-ellipse-bottom-left,
-.dotted-ellipse-bottom-right{
+.dotted-ellipse-bottom-right,
+.shape-cirtcle-top-left,
+.shape-cirtcle-top-left-small,
+.shape-cirtcle-top-right,
+.shape-cirtcle-top-right-small,
+.shape-cirtcle-bottom-left,
+.shape-cirtcle-bottom-left-small,
+.shape-cirtcle-bottom-right,
+.shape-cirtcle-bottom-right-small,
+.shape-triangle-top-left,
+.shape-triangle-top-right,
+.shape-triangle-bottom-left,
+.shape-triangle-bottom-right{
     position: relative;
     z-index: 0;
 }
@@ -226,7 +241,160 @@ a:hover{
     z-index: -1;
     opacity: .3;
 }
-
+/* Circle Shape CSS */
+.shape-cirtcle-top-left::before{
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -15%;
+    width: 50%;
+    padding-bottom: 50%;
+    border-radius: 100%;
+    background: linear-gradient(216.35deg, var(--printico-color) 14.79%, #FFFFFF00 93.62% );
+    z-index: -1;
+    opacity: .3;
+}
+.shape-cirtcle-top-left-small::before{
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 25%;
+    padding-bottom: 25%;
+    border-radius: 100%;
+    background: linear-gradient(216.35deg, var(--printico-color) 14.79%, #FFFFFF00 93.62% );
+    z-index: -1;
+    opacity: .3;
+}
+.shape-cirtcle-top-right::after{
+    content: "";
+    position: absolute;
+    top: -30%;
+    right: -15%;
+    width: 50%;
+    padding-bottom: 50%;
+    border-radius: 100%;
+    background: linear-gradient(216.35deg, var(--printico-color) 14.79%, #FFFFFF00 93.62% );
+    z-index: -1;
+    opacity: .3;
+}
+.shape-cirtcle-top-right-small::after{
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 25%;
+    padding-bottom: 25%;
+    border-radius: 100%;
+    background: linear-gradient(216.35deg, var(--printico-color) 14.79%, #FFFFFF00 93.62% );
+    z-index: -1;
+    opacity: .3;
+}
+.shape-cirtcle-bottom-left::before{
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    left: -15%;
+    width: 50%;
+    padding-bottom: 50%;
+    border-radius: 100%;
+    background: linear-gradient(216.35deg, var(--printico-color) 14.79%, #FFFFFF00 93.62% );
+    z-index: -1;
+    opacity: .3;
+}
+.shape-cirtcle-bottom-left-small::before{
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 25%;
+    padding-bottom: 25%;
+    border-radius: 100%;
+    background: linear-gradient(216.35deg, var(--printico-color) 14.79%, #FFFFFF00 93.62% );
+    z-index: -1;
+    opacity: .3;
+}
+.shape-cirtcle-bottom-right::after{
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    right: -15%;
+    width: 50%;
+    padding-bottom: 50%;
+    border-radius: 100%;
+    background: linear-gradient(216.35deg, var(--printico-color) 14.79%, #FFFFFF00 93.62% );
+    z-index: -1;
+    opacity: .3;
+}
+.shape-cirtcle-bottom-right-small::after{
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 25%;
+    padding-bottom: 25%;
+    border-radius: 100%;
+    background: linear-gradient(216.35deg, var(--printico-color) 14.79%, #FFFFFF00 93.62% );
+    z-index: -1;
+    opacity: .3;
+}
+/* Triangle Shape CSS */
+.shape-triangle-top-left::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 50% 0, 0 100%, 0 100%);
+    background: rgba(var(--printico-color-rgb), 0.5);
+    transition: all 0.25s ease-in-out 0s;
+    z-index: -1;
+}
+.shape-triangle-top-right::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 0, 100% 0, 100% 0, 100% 100%);
+    background: rgba(var(--printico-color-rgb), 0.5);
+    transition: all 0.25s ease-in-out 0s;
+    z-index: -1;
+}
+.shape-triangle-bottom-left::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0%, 50% 100%, 0 100%, 0 100%);
+    background: rgba(var(--printico-color-rgb), 0.5);
+    transition: all 0.25s ease-in-out 0s;
+    z-index: -1;
+}
+.shape-triangle-bottom-right::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 100%, 100% 0%, 100% 100%, 0 100%);
+    background: rgba(var(--printico-color-rgb), 0.5);
+    transition: all 0.25s ease-in-out 0s;
+    z-index: -1;
+}
 /* >> 04. Header Topbar CSS
 ---------------------------*/
 .header-topbar{
@@ -275,8 +443,12 @@ a:hover{
 }
 /* >> 05. Header CSS
 ---------------------*/
-
+.header{
+    position: relative;
+    z-index: 9999;
+}
 .fixed-top {
+    position: fixed!important;
     top: -40px;
     transform: translateY(40px);
     transition: transform .5s;

@@ -1,10 +1,12 @@
 (function ($) {
     var defaultFunction = function () {
 
+        var headerHeight = $('header').outerHeight();
+        $('.hero-section').css("margin-top", - headerHeight);
+
         $(window).scroll(function () {
 
             var scrollTopValue = $(this).scrollTop();
-            var headerHeight = $('header').outerHeight();
             
             if (scrollTopValue > 200) {
 
