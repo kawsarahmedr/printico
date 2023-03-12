@@ -28,3 +28,11 @@ https://marcbruederlin.github.io/particles.js/
 === AOS JS - Animate On Scroll effect ===
 
 https://michalsnik.github.io/aos/
+
+=== Background Blur CSS ===
+
+*{
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
